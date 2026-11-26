@@ -1,0 +1,26 @@
+{
+  "random_seed": 42,
+  "unsw_nb15": {
+    "train_filename": "UNSW_NB15_training-set.csv",
+    "test_filename": "UNSW_NB15_testing-set.csv",
+    "val_ratio_from_train": 0.15,
+    "drop_columns": ["id"],
+    "categorical_columns": ["proto", "service", "state"],
+    "binary_target": "label",
+    "multiclass_target": "attack_cat",
+    "benign_class_name": "Normal",
+    "ae_ohe_min_frequency": 0.005,
+    "ae_clip_bounds": [-10.0, 10.0]
+  },
+  "cicids2017": {
+    "val_ratio": 0.15,
+    "test_ratio": 0.15,
+    "target_column": "Label",
+    "benign_class_name": "BENIGN",
+    "sentinel_negative_columns": [
+      "Init_Win_bytes_forward",
+      "Init_Win_bytes_backward"
+    ],
+    "ae_clip_bounds": [-10.0, 10.0]
+  }
+}
