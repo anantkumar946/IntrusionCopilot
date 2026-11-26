@@ -71,3 +71,21 @@ def test_unsw_supervised_artifacts_and_report_exist() -> None:
             summary = report["tasks"][task]["models"][m]["test_metrics"]["summary"]
             assert 0.0 <= summary["operational_fpr"] <= 1.0
             assert 0.0 < summary["macro_f1"] <= 1.0
+
+
+
+def test_cicids_supervised_artifacts_and_report_exist() -> None:
+    model_dir = settings.resolve_path(settings.artifacts_dir) / "models" / "cicids2017"
+    report_path = settings.resolve_path(settings.reports_dir) / "evaluation" / "cicids2017_supervised_report.json"
+
+    assert report_path.exists(), "Run supervised training on cicids2017 first"
+    for fname in ("binary_rf.joblib", "binary_xgb.ubj", "multiclass_rf.joblib", "multiclass_xgb.ubj", "manifest.json"):
+        assert (model_dir / fname).exists(), f"Missing artifact: {fname}"
+
+    report = json.loads(report_path.read_text(encoding="utf-8"))
+    for task in ("binary", "multiclass"):
+        assert report["tasks"][task]["selection"]["selected_model"] in ("rf", "xgb")
+        for m in ("rf", "xgb"):
+            summary = report["tasks"][task]["models"][m]["test_metrics"]["summary"]
+            assert 0.0 <= summary["operational_fpr"] <= 1.0
+            assert 0.0 < summary["macro_f1"] <= 1.0
