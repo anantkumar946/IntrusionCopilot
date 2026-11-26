@@ -23,19 +23,40 @@ env/
 .idea/
 .vscode/
 
+# Testing & linting caches
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
 # Logs
 *.log
 
-# Machine Learning model files
+# Machine Learning & Deep Learning artifacts
+/artifacts/
 *.pt
 *.pth
 *.onnx
 *.pkl
 *.joblib
+*.keras
+*.h5
+*.ubj
 
-# Datasets
-data/
-datasets/
+# Local databases & alert stores
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.jsonl
+
+# Datasets & tabular dumps
+/data/
+/datasets/
+*.parquet
+*.csv
+*.zip
 
 # OS-generated files
 .DS_Store

@@ -20,6 +20,7 @@ dependencies = [
     "pandas>=2.2.0",
     "pyarrow>=17.0.0",
     "pydantic>=2.8.0",
+    "pydantic-settings>=2.15.0",
     "python-dotenv>=1.0.1",
     "scikit-learn>=1.5.0",
     "streamlit>=1.38.0",
@@ -45,3 +46,8 @@ torchvision = { index = "pytorch-cu130" }
 name = "pytorch-cu130"
 url = "https://download.pytorch.org/whl/cu130"
 explicit = true
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
