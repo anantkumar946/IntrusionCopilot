@@ -1,0 +1,53 @@
+{
+  "random_seed": 42,
+  "multiclass_weight_power": 0.5,
+  "multiclass_weight_cap": 50.0,
+  "latency_benchmark": {
+    "single_flow_runs": 100,
+    "batch_size": 10000
+  },
+  "unsw_nb15": {
+    "rf": {
+      "n_estimators": 150,
+      "max_depth": 24,
+      "min_samples_leaf": 2,
+      "max_features": "sqrt",
+      "class_weight": "balanced_subsample",
+      "n_jobs": -1
+    },
+    "xgb": {
+      "n_estimators": 350,
+      "max_depth": 8,
+      "learning_rate": 0.08,
+      "subsample": 0.85,
+      "colsample_bytree": 0.85,
+      "min_child_weight": 2,
+      "tree_method": "hist",
+      "device": "cuda",
+      "early_stopping_rounds": 25
+    }
+  },
+  "cicids2017": {
+    "rf": {
+      "n_estimators": 100,
+      "max_depth": 22,
+      "min_samples_leaf": 2,
+      "max_samples": 0.5,
+      "max_features": "sqrt",
+      "class_weight": "balanced_subsample",
+      "n_jobs": -1
+    },
+    "xgb": {
+      "n_estimators": 250,
+      "max_depth": 8,
+      "learning_rate": 0.1,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "min_child_weight": 2,
+      "max_bin": 256,
+      "tree_method": "hist",
+      "device": "cuda",
+      "early_stopping_rounds": 20
+    }
+  }
+}
