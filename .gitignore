@@ -1,0 +1,42 @@
+# Python-generated files
+__pycache__/
+*.py[cod]
+build/
+dist/
+wheels/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# IDE and editor
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Machine Learning model files
+*.pt
+*.pth
+*.onnx
+*.pkl
+*.joblib
+
+# Datasets
+data/
+datasets/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
