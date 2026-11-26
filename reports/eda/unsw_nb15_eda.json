@@ -1,0 +1,447 @@
+{
+  "dataset": "UNSW-NB15",
+  "raw_dir": "C:\\Users\\antan\\Extras\\Projects\\IntrusionCopilot\\data\\raw\\UNSW_NB15",
+  "files": {
+    "UNSW_NB15_testing-set.csv": {
+      "size_mb": 14.67,
+      "encoding": "utf-8-sig",
+      "rows": 82332,
+      "columns": 45,
+      "column_names": [
+        "id",
+        "dur",
+        "proto",
+        "service",
+        "state",
+        "spkts",
+        "dpkts",
+        "sbytes",
+        "dbytes",
+        "rate",
+        "sttl",
+        "dttl",
+        "sload",
+        "dload",
+        "sloss",
+        "dloss",
+        "sinpkt",
+        "dinpkt",
+        "sjit",
+        "djit",
+        "swin",
+        "stcpb",
+        "dtcpb",
+        "dwin",
+        "tcprtt",
+        "synack",
+        "ackdat",
+        "smean",
+        "dmean",
+        "trans_depth",
+        "response_body_len",
+        "ct_srv_src",
+        "ct_state_ttl",
+        "ct_dst_ltm",
+        "ct_src_dport_ltm",
+        "ct_dst_sport_ltm",
+        "ct_dst_src_ltm",
+        "is_ftp_login",
+        "ct_ftp_cmd",
+        "ct_flw_http_mthd",
+        "ct_src_ltm",
+        "ct_srv_dst",
+        "is_sm_ips_ports",
+        "attack_cat",
+        "label"
+      ],
+      "columns_with_whitespace": [],
+      "dtypes": {
+        "id": "int64",
+        "dur": "float64",
+        "proto": "object",
+        "service": "object",
+        "state": "object",
+        "spkts": "int64",
+        "dpkts": "int64",
+        "sbytes": "int64",
+        "dbytes": "int64",
+        "rate": "float64",
+        "sttl": "int64",
+        "dttl": "int64",
+        "sload": "float64",
+        "dload": "float64",
+        "sloss": "int64",
+        "dloss": "int64",
+        "sinpkt": "float64",
+        "dinpkt": "float64",
+        "sjit": "float64",
+        "djit": "float64",
+        "swin": "int64",
+        "stcpb": "int64",
+        "dtcpb": "int64",
+        "dwin": "int64",
+        "tcprtt": "float64",
+        "synack": "float64",
+        "ackdat": "float64",
+        "smean": "int64",
+        "dmean": "int64",
+        "trans_depth": "int64",
+        "response_body_len": "int64",
+        "ct_srv_src": "int64",
+        "ct_state_ttl": "int64",
+        "ct_dst_ltm": "int64",
+        "ct_src_dport_ltm": "int64",
+        "ct_dst_sport_ltm": "int64",
+        "ct_dst_src_ltm": "int64",
+        "is_ftp_login": "int64",
+        "ct_ftp_cmd": "int64",
+        "ct_flw_http_mthd": "int64",
+        "ct_src_ltm": "int64",
+        "ct_srv_dst": "int64",
+        "is_sm_ips_ports": "int64",
+        "attack_cat": "object",
+        "label": "int64"
+      },
+      "numeric_columns_count": 41,
+      "categorical_columns": [
+        "proto",
+        "service",
+        "state",
+        "attack_cat"
+      ],
+      "categorical_summary": {
+        "proto": {
+          "nunique": 131,
+          "top_values": {
+            "tcp": 43095,
+            "udp": 29418,
+            "unas": 3515,
+            "arp": 987,
+            "ospf": 676,
+            "sctp": 324,
+            "any": 96,
+            "gre": 88,
+            "rsvp": 64,
+            "ipv6": 61,
+            "sep": 58,
+            "sun-nd": 54
+          },
+          "has_dash_placeholder": false
+        },
+        "service": {
+          "nunique": 13,
+          "top_values": {
+            "-": 47153,
+            "dns": 21367,
+            "http": 8287,
+            "smtp": 1851,
+            "ftp": 1552,
+            "ftp-data": 1396,
+            "pop3": 423,
+            "ssh": 204,
+            "ssl": 30,
+            "snmp": 29,
+            "dhcp": 26,
+            "radius": 9
+          },
+          "has_dash_placeholder": true
+        },
+        "state": {
+          "nunique": 7,
+          "top_values": {
+            "FIN": 39339,
+            "INT": 34163,
+            "CON": 6982,
+            "REQ": 1842,
+            "ACC": 4,
+            "RST": 1,
+            "CLO": 1
+          },
+          "has_dash_placeholder": false
+        },
+        "attack_cat": {
+          "nunique": 10,
+          "top_values": {
+            "Normal": 37000,
+            "Generic": 18871,
+            "Exploits": 11132,
+            "Fuzzers": 6062,
+            "DoS": 4089,
+            "Reconnaissance": 3496,
+            "Analysis": 677,
+            "Backdoor": 583,
+            "Shellcode": 378,
+            "Worms": 44
+          },
+          "has_dash_placeholder": false
+        }
+      },
+      "zero_variance_columns": [],
+      "anomalies": {
+        "nan": {},
+        "inf": {},
+        "negative": {}
+      },
+      "exact_duplicates_all_cols": 0,
+      "exact_duplicates_excluding_id": 26387,
+      "binary_label_distribution": {
+        "1": 45332,
+        "0": 37000
+      },
+      "attack_cat_distribution": {
+        "'Normal'": 37000,
+        "'Generic'": 18871,
+        "'Exploits'": 11132,
+        "'Fuzzers'": 6062,
+        "'DoS'": 4089,
+        "'Reconnaissance'": 3496,
+        "'Analysis'": 677,
+        "'Backdoor'": 583,
+        "'Shellcode'": 378,
+        "'Worms'": 44
+      }
+    },
+    "UNSW_NB15_training-set.csv": {
+      "size_mb": 30.8,
+      "encoding": "utf-8-sig",
+      "rows": 175341,
+      "columns": 45,
+      "column_names": [
+        "id",
+        "dur",
+        "proto",
+        "service",
+        "state",
+        "spkts",
+        "dpkts",
+        "sbytes",
+        "dbytes",
+        "rate",
+        "sttl",
+        "dttl",
+        "sload",
+        "dload",
+        "sloss",
+        "dloss",
+        "sinpkt",
+        "dinpkt",
+        "sjit",
+        "djit",
+        "swin",
+        "stcpb",
+        "dtcpb",
+        "dwin",
+        "tcprtt",
+        "synack",
+        "ackdat",
+        "smean",
+        "dmean",
+        "trans_depth",
+        "response_body_len",
+        "ct_srv_src",
+        "ct_state_ttl",
+        "ct_dst_ltm",
+        "ct_src_dport_ltm",
+        "ct_dst_sport_ltm",
+        "ct_dst_src_ltm",
+        "is_ftp_login",
+        "ct_ftp_cmd",
+        "ct_flw_http_mthd",
+        "ct_src_ltm",
+        "ct_srv_dst",
+        "is_sm_ips_ports",
+        "attack_cat",
+        "label"
+      ],
+      "columns_with_whitespace": [],
+      "dtypes": {
+        "id": "int64",
+        "dur": "float64",
+        "proto": "object",
+        "service": "object",
+        "state": "object",
+        "spkts": "int64",
+        "dpkts": "int64",
+        "sbytes": "int64",
+        "dbytes": "int64",
+        "rate": "float64",
+        "sttl": "int64",
+        "dttl": "int64",
+        "sload": "float64",
+        "dload": "float64",
+        "sloss": "int64",
+        "dloss": "int64",
+        "sinpkt": "float64",
+        "dinpkt": "float64",
+        "sjit": "float64",
+        "djit": "float64",
+        "swin": "int64",
+        "stcpb": "int64",
+        "dtcpb": "int64",
+        "dwin": "int64",
+        "tcprtt": "float64",
+        "synack": "float64",
+        "ackdat": "float64",
+        "smean": "int64",
+        "dmean": "int64",
+        "trans_depth": "int64",
+        "response_body_len": "int64",
+        "ct_srv_src": "int64",
+        "ct_state_ttl": "int64",
+        "ct_dst_ltm": "int64",
+        "ct_src_dport_ltm": "int64",
+        "ct_dst_sport_ltm": "int64",
+        "ct_dst_src_ltm": "int64",
+        "is_ftp_login": "int64",
+        "ct_ftp_cmd": "int64",
+        "ct_flw_http_mthd": "int64",
+        "ct_src_ltm": "int64",
+        "ct_srv_dst": "int64",
+        "is_sm_ips_ports": "int64",
+        "attack_cat": "object",
+        "label": "int64"
+      },
+      "numeric_columns_count": 41,
+      "categorical_columns": [
+        "proto",
+        "service",
+        "state",
+        "attack_cat"
+      ],
+      "categorical_summary": {
+        "proto": {
+          "nunique": 133,
+          "top_values": {
+            "tcp": 79946,
+            "udp": 63283,
+            "unas": 12084,
+            "arp": 2859,
+            "ospf": 2595,
+            "sctp": 1150,
+            "any": 300,
+            "gre": 225,
+            "ipv6": 201,
+            "mobile": 201,
+            "pim": 201,
+            "swipe": 201
+          },
+          "has_dash_placeholder": false
+        },
+        "service": {
+          "nunique": 13,
+          "top_values": {
+            "-": 94168,
+            "dns": 47294,
+            "http": 18724,
+            "smtp": 5058,
+            "ftp-data": 3995,
+            "ftp": 3428,
+            "ssh": 1302,
+            "pop3": 1105,
+            "dhcp": 94,
+            "snmp": 80,
+            "ssl": 56,
+            "irc": 25
+          },
+          "has_dash_placeholder": true
+        },
+        "state": {
+          "nunique": 9,
+          "top_values": {
+            "INT": 82275,
+            "FIN": 77825,
+            "CON": 13152,
+            "REQ": 1991,
+            "RST": 83,
+            "ECO": 12,
+            "PAR": 1,
+            "URN": 1,
+            "no": 1
+          },
+          "has_dash_placeholder": false
+        },
+        "attack_cat": {
+          "nunique": 10,
+          "top_values": {
+            "Normal": 56000,
+            "Generic": 40000,
+            "Exploits": 33393,
+            "Fuzzers": 18184,
+            "DoS": 12264,
+            "Reconnaissance": 10491,
+            "Analysis": 2000,
+            "Backdoor": 1746,
+            "Shellcode": 1133,
+            "Worms": 130
+          },
+          "has_dash_placeholder": false
+        }
+      },
+      "zero_variance_columns": [],
+      "anomalies": {
+        "nan": {},
+        "inf": {},
+        "negative": {}
+      },
+      "exact_duplicates_all_cols": 0,
+      "exact_duplicates_excluding_id": 67601,
+      "binary_label_distribution": {
+        "1": 119341,
+        "0": 56000
+      },
+      "attack_cat_distribution": {
+        "'Normal'": 56000,
+        "'Generic'": 40000,
+        "'Exploits'": 33393,
+        "'Fuzzers'": 18184,
+        "'DoS'": 12264,
+        "'Reconnaissance'": 10491,
+        "'Analysis'": 2000,
+        "'Backdoor'": 1746,
+        "'Shellcode'": 1133,
+        "'Worms'": 130
+      }
+    }
+  },
+  "cross_file_audit": {
+    "identical_columns": true,
+    "cross_file_overlap_excluding_id": {
+      "files": [
+        "UNSW_NB15_testing-set.csv",
+        "UNSW_NB15_training-set.csv"
+      ],
+      "unique_shared_row_hashes": 940,
+      "rows_in_UNSW_NB15_testing-set.csv_also_in_UNSW_NB15_training-set.csv": 4247,
+      "rows_in_UNSW_NB15_training-set.csv_also_in_UNSW_NB15_testing-set.csv": 8421
+    },
+    "categorical_value_differences": {
+      "proto": {
+        "only_in_UNSW_NB15_testing-set.csv": [],
+        "only_in_UNSW_NB15_training-set.csv": [
+          "icmp",
+          "rtp"
+        ]
+      },
+      "service": {
+        "only_in_UNSW_NB15_testing-set.csv": [],
+        "only_in_UNSW_NB15_training-set.csv": []
+      },
+      "state": {
+        "only_in_UNSW_NB15_testing-set.csv": [
+          "ACC",
+          "CLO"
+        ],
+        "only_in_UNSW_NB15_training-set.csv": [
+          "ECO",
+          "PAR",
+          "URN",
+          "no"
+        ]
+      },
+      "attack_cat": {
+        "only_in_UNSW_NB15_testing-set.csv": [],
+        "only_in_UNSW_NB15_training-set.csv": []
+      }
+    }
+  }
+}
